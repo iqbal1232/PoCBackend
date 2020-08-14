@@ -68,7 +68,7 @@ namespace demo.Controllers
 
                     CloudBlobContainer Container = blobClient.GetContainerReference("tmbfile");
                     Container.SetPermissionsAsync(new BlobContainerPermissions { PublicAccess = BlobContainerPublicAccessType.Blob });
-                    var fileBlob = Container.GetBlockBlobReference(request.Params["Description"] + "/"+request.Files[file].FileName);
+                    var fileBlob = Container.GetBlockBlobReference(request.Files[file].FileName);
                     
                     fileBlob.UploadFromStream(request.Files[file].InputStream);
                     
