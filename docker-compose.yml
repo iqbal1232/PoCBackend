@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+
+  webapplication7:
+    image: ${DOCKER_REGISTRY-}webapplication7
+    build:
+      context: .\WebApplication7
+      dockerfile: Dockerfile
+    volumes:
+      - C:\Users\Iiqbaljeet\source\repos\WebApplication7\WebApplication7\App_Data\uploads:C:\inetpub\wwwroot\App_Data\uploads
+    ports:
+      - "8080:80"
+      - "443:443"
+    
