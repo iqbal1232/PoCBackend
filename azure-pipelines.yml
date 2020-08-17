@@ -27,13 +27,13 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 - task: Docker@2
   inputs:
     containerRegistry: 'TMBPoC'
-    repository: 'PoC'
+    repository: 'tmbpoc.azurecr.io/PoC'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
