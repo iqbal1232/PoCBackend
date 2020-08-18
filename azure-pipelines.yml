@@ -34,6 +34,16 @@ steps:
     repository: 'iqbaljeet/azurepoc'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'Kubernetes Service Connection'
+    kubernetesServiceEndpoint: 'TMBPoCConn'
+    command: 'apply'
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Container Registry'
+    dockerRegistryEndpoint: 'TMBPoC'
+    secretName: 'mysecret'
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
