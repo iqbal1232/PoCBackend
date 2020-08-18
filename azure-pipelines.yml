@@ -31,9 +31,10 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'TMBPoC'
-    repository: 'iqbaljeet/azurepoc:latest'
+    repository: 'iqbaljeet/azurepoc'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: 'latest'
 
 - task: VSTest@2
   inputs:
