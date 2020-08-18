@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: PoC-Backend
+  labels:
+    app: webAPI
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webAPI
+  template:
+    metadata:
+      labels:
+        app: webAPI
+    spec:
+      containers:
+        - name: back-end
+          image: index.docker.io/iqbaljeet/azurepoc:latest
+          ports:
+            - containerPort: 80
+        
