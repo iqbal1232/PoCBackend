@@ -19,5 +19,5 @@ spec:
         - name: back-end
           image: index.docker.io/iqbaljeet/azurepoc:latest
           ports:
-            - containerPort: 80
+            - containerPort: 5000
         
