@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: PoC-Backend
+  name: pocbackend
   labels:
     app: webAPI
 spec:
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: PoC-Backend
+  name: pocbackend
 spec:
   type: LoadBalancer
   ports:
