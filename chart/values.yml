@@ -1,0 +1,18 @@
+environment: development
+
+apphost: k8s
+
+label:
+  name: pocbackend
+
+container:
+  name: backend
+  pullPolicy: Always
+  image: index.docker.io/iqbaleet/azurepoc
+  tag: latest
+  port: 80
+replicas: 3
+
+service:
+  port: 8888
+  type: LoadBalancer
