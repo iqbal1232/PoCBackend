@@ -32,15 +32,10 @@ spec:
     app: webAPI
 ---
 apiVersion: networking.k8s.io/v1beta1
-kind: IngressClass
+kind: Ingress
 metadata:
-  name: ingress
+  name: test-ingress
 spec:
-  controller: example.com/ingress-controller
   backend:
     serviceName: pocbackend
     servicePort: 80
-  parameters:
-    apiGroup: k8s.example.com/v1alpha
-    kind: IngressParameters
-    name: ingress
