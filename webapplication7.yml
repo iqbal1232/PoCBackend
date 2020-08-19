@@ -38,4 +38,4 @@ metadata:
 spec:
   backend:
     serviceName: pocbackend
-    servicePort: 80
+    servicePort: 5000
