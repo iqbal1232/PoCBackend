@@ -31,7 +31,6 @@ namespace demo.Controllers
             response.Content = new StringContent
         (doc.OuterXml, Encoding.UTF8, "application/xml");
             return response;
-
         }
 
         public HttpResponseMessage GetFolderDetails(string description)
