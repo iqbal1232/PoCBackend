@@ -29,7 +29,7 @@ namespace WebApplication7.Controllers
             var blobClient = storageAccount.CreateCloudBlobClient();
             var pathn = System.Web.Hosting.HostingEnvironment.MapPath("~");
             CloudBlobContainer container = blobClient.GetContainerReference("tmbfile");
-            var blob = container.GetBlockBlobReference(description+"/"+file);
+            var blob = container.GetBlockBlobReference(file);
             MemoryStream memStream = new MemoryStream();
             blob.DownloadToStream(memStream);
             
