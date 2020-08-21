@@ -32,8 +32,8 @@ namespace WebApplication7.Controllers
             var blob = container.GetBlockBlobReference(file);
             MemoryStream memStream = new MemoryStream();
             blob.DownloadToStream(memStream);
-            
-            response.Content = new StreamContent(memStream);
+            var data = new MemoryStream(memStream.GetBuffer());
+            response.Content = new StreamContent(data);
             var headers = response.Content.Headers;
             headers.ContentDisposition = new ContentDispositionHeaderValue("attachement");
             headers.ContentDisposition.FileName = file;
