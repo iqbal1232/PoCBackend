@@ -34,7 +34,7 @@ steps:
     repository: 'iqbaljeet/azurepoc'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'latest'
+    tags: 'backend'
 
 - task: VSTest@2
   inputs:
