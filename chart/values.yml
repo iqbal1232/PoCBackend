@@ -3,7 +3,7 @@ environment: development
 apphost: k8s
 
 label:
-  name: pocbackend
+  name: pocback
 
 container:
   name: backend
