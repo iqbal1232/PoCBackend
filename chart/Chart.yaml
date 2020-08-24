@@ -1,2 +1,4 @@
+apiVersion: v1
+description: chart for kuebrenrtes
 name: pocback
-version: 1.0.0
+version: v0.1.0
