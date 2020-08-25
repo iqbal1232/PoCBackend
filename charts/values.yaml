@@ -8,7 +8,7 @@ label:
 container:
   name: backend
   pullPolicy: Always
-  image: pocdeployacr.azurecr.io/pocdeploy:latest
+  image: pocdeployacr.azurecr.io/pocdeploy
   tag: latest
   port: 80
 replicas: 1
