@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "name": {
+      "value": "pocc"
+    },
+    "agentPoolProfiles": {
+      "value": [
+        {
+          "name": "nodepool1",
+          "nodeCount": 1,
+          "nodeVmSize": "Standard_D4_v3",
+          "availabilityZones": [
+            "1",
+            "2",
+            "3"
+          ],
+          "osType": "Windows",
+          "enableAutoScaling": true
+          "mode": "System",
+          "nodeLabels": {
+            "environment": "production"
+          },
+          "nodeTaints": []
+        }
+      ]
+    },
+    "kubernetesVersion": {
+      "value": "1.18.6"
+    },
+    "workspaceName": {
+      "value": "azurekubernetesservicedemo"
+    },
+    "workspaceResourceGroup": {
+      "value": "operations-management"
+    },
+    "acrName": {
+      "value": "azstcr"
+    },
+    "acrResourceGroupName": {
+      "value": "acr"
+    },
+    "vnetName": {
+      "value": "azst-aks-demo"
+    },
+    "vnetSubnetName": {
+      "value": "azst-aks-demo"
+    },
+    "vnetResourceGroupName": {
+      "value": "azst-aks-demo"
+    },
+    "controlPlaneSku": {
+      "value": "Free"
+    },
+    "aksPolicy": {
+      "value": false
+    },
+    "adminGroups": {
+      "value": [
+        "00000000-0000-0000-0000-000000000000"
+      ]
+    },
+    "ipWhitelist": {
+      "value": []
+    },
+    "privateCluster": {
+      "value": false
+    }
+  }
+}
