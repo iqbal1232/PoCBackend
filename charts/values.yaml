@@ -1,4 +1,4 @@
-environment: development
+environment: production
 
 apphost: k8s
 
@@ -8,7 +8,7 @@ label:
 container:
   name: backend
   pullPolicy: Always
-  image: index.docker.io/iqbaleet/azurepoc
+  image: pocdeployacr.azurecr.io/pocdeploy:latest
   tag: latest
   port: 80
 replicas: 1
